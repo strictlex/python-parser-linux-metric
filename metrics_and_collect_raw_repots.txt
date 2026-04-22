@@ -1,0 +1,7 @@
+sar -A -o /tmp/sar_full.out 10 240 &
+iostat -xt 10 240 > /tmp/iostat_full.out 2>&1 &
+chmod +x parse_sar.sh
+./parse_sar.sh /tmp/sar_full.out
+
+
+rm -f /tmp/sar*.out /tmp/iostat*.out

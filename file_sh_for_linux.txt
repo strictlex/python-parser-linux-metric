@@ -1,0 +1,20 @@
+#!/bin/bash
+# Скрипт для парсинга sar файлов
+
+if [ -z "$1" ]; then
+    echo "Использование: $0 <sar_файл>"
+    exit 1
+fi
+
+sar -P ALL -f "$1" > "${1}_p_all.csv"
+sar -u -f "$1" > "${1}_cpu_util.csv"
+sar -b -f "$1" > "${1}_io.csv"
+sar -B -f "$1" > "${1}_paging.csv"
+sar -c -f "$1" > "${1}_process_creation.csv"
+sar -n ALL -f "$1" > "${1}_network.csv"
+sar -r -f "$1" > "${1}_memory.csv"
+sar -S -f "$1" > "${1}_swap.csv"
+sar -d -f "$1" > "${1}_disk.csv"
+sar -q -f "$1" > "${1}_queue.csv"
+
+echo "Готово! Созданы csv файлы из $1"
