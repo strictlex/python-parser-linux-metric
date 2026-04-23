@@ -11,7 +11,7 @@ wheels/
 .venv
 
 filtered_reports/
-raw_reports/
+raw_reports/*.csv
 graphs/
 sar_anlysis.xlsx
 
