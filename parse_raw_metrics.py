@@ -34,6 +34,9 @@ def main():
                     if row[0]==first_time or row[1] == header[1]:
                         break
                     else:
+                        for el in row:
+                            if "," in el:
+                                str.replace(el,',','.')
                         writer.writerow(row)
                     
 
