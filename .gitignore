@@ -10,8 +10,8 @@ wheels/
 # Virtual environments
 .venv
 
-filtered_reports/
-raw_reports/*.csv
-graphs/
+# filtered_reports/
+# raw_reports/*.csv
+# graphs/
 sar_anlysis.xlsx
 
