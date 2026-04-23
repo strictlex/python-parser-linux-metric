@@ -5,11 +5,12 @@ build/
 dist/
 wheels/
 *.egg-info
+.DS_Store
 
 # Virtual environments
 .venv
 
-filtred_reports/
+filtered_reports/
 raw_reports/
 graphs/
 sar_anlysis.xlsx
